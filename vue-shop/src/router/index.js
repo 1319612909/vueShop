@@ -15,4 +15,12 @@ const routes = [
   const router = new VueRouter({
     routes // (缩写) 相当于 routes: routes
   })
+
+router.beforeEach((to,from,next)=>{
+  if(to.path =='/login') return next()
+  let token = sessionStorage.getItem('Token')
+  if(!token) return next('/login')
+  next()
+})
+
   export default  router
