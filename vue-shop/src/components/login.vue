@@ -62,7 +62,11 @@
             // })
             // async+await+解构赋值方法，
             const {data:res} = await this.$axios.post('/login',this.ruleForm)
+            if(res.meta.status !== 200) return this.$message.error('登录失败');
             console.log(res)
+            // 保存token
+            sessionStorage.setItem('Token',res.data.token)
+            this.$router.push('home')
           } else {
             console.log('error submit!!');
             return false;
