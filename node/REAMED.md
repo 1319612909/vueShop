@@ -48,7 +48,7 @@ $('h2').addClass('welcome');
 ip：确定服务器主机的位置
 端口号：确定服务器里某一个程序
 
- ### express 框架
+ ### express 框架 
  1、安装
  2、引入
 
@@ -64,3 +64,17 @@ ip：确定服务器主机的位置
    - post  req.body  获取参数，需要使用body-parser来解析参数格式
 
 ### 路由
+ + express.Router()
+  ```js
+  let userRouter = require('./routerTest/userRouter')
+  app.use('/user',userRouter)
+  
+  ```
+  -对应的userRouter.js文件
+  ```js
+  const router = express.Router()
+  router.get('/add',(req,res)=>{
+      res.send('user/add')
+  })
+  module.exports = router
+  ```

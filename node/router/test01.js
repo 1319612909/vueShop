@@ -78,5 +78,25 @@ server.listen(3000,function(){
 // 通过require导入需要的js文件，如果想要使用引入文件的内部东西，必须在引入的文件中使用exports导出才能在本文件中使用
 const Obj = require('./test02')
 
+
+
+const fs = require('fs')
+
+// 同步读取
+// fs.readdir(path[options], callback)
+// let dirs = fs.readdirSync('./')
+// console.log(dirs)
+
+
+//同步的时候使用  try + catch 捕获容易出错的代码，解决不会遇到错误代码就不执行后续代码
+try{
+    let dirs = fs.readdirSync('./test01.js')
+}
+catch(err){
+    console.log(err)
+}
+
+console.log('后续代码')
+
 console.log(Obj.add(5,5))
 console.log(Obj.a)
