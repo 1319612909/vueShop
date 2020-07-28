@@ -80,7 +80,7 @@ const Obj = require('./test02')
 
 
 
-const fs = require('fs')
+
 
 // 同步读取
 // fs.readdir(path[options], callback)

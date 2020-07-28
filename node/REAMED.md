@@ -78,3 +78,36 @@ ip：确定服务器主机的位置
   })
   module.exports = router
   ```
+
+  ### 中间件 middlewear
+   + 中间件使用，一定要注意next
+   + 自定义中间件（全局，局部）
+
+  ```js
+  //全局写法
+  app.use('/',(req,res,next)=>{
+    //中间件
+    //此处可以做拦截的代码逻辑操作
+    next()
+  })
+
+  //局部写法,在哪一个写哪一个有用
+  app.get('./test',(req,res,next)=>{
+     //中间件
+    //此处可以做拦截的代码逻辑操作
+    next()
+  },(req,res)=>{
+    res.send('test')
+  })
+
+  ```
+### 绝对路径
+ + 物理路径，也就是绝对路径
+  - __dirname  ,console.log(__dirname),可以获取绝对路径
++ 绝对路径拼接
+  ```js
+  const path = require('path')
+  //绝对路径拼接
+  path.join(__dirname, './xx')
+
+  ```
