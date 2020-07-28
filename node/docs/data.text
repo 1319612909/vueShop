@@ -1,1 +1,22 @@
-readme
+require（）方法用来加载模块，可加载node中的具名核心模块，和自己编写的js文件
+加载后的文件相互独立，不会相互污染变量
+加载自己编写的文件，使用相对定位require('./test01)
+
+
+加载导出
+拿到被加载文件模块导出的接口对象
+exports 默认是一个空对象
+
+
+DNS-->ip地址
+ip地址用来定位计算机
+端口号用来定位具体的应用程序（列如这些程序：QQ，微信，浏览器，服务器软件）
+服务器运行各种软件
+
+
+content-Type 告知对方我给你发送的内容是什么类型
+如果是图片，就不需要使用utf8,一般只有字符才会指定编码
+
+content-Type image/jpge
+ response.setHeader('Content-Type', 'text/html;charset=utf-8') 
+ 
