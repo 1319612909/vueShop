@@ -111,3 +111,35 @@ ip：确定服务器主机的位置
   path.join(__dirname, './xx')
 
   ```
+
+
+### mongodb安装
++ 百度地址下载以后安装  [地址]https://www.mongodb.com/try/download/community，  下载  MongoDB Community Server 的msi
++ 配置环境变量
++ 在一个C或D或E盘的根目录下创建文件夹data/db两个文件
++ 找到mongodb下面的bin路径，打开cmd运行 mongod --dbpath C:\data\db就可以启动了
++ 启动以后，检查是否成功，打开http://localhost:27017/，查看是否有以下显示，显示则成功
+ - It looks like you are trying to access MongoDB over HTTP on the native driver port.
+
++ 另起一个cmd 输入命令 mongo, 运行不报错，在箭头后面输入命令 show dbs显示以下数据库成功
+ - admin  0.000GB
+ - congig 0.000GB
+ -local   0.000GB
+
+
+
+
+### mongodb
+ + 指令
+  - mongodb   数据库名
+  - mongod    命令行启动数据库命令
+  - mongo     命令行操作数据库指令
+  - mongoose node  操作数据库的插件
+
+
+### 跨域
+ + cors
+ + jsonp
+ + 代理 （仅前端即可实现） 
+   - 原理，就是自己创建一个服务器使用api接口转发请求代理到要需要访问服务器api，自己请求自己服务的api就不会形成跨域了
+

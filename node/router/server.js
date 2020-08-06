@@ -8,5 +8,6 @@ app.use('/user',userRouter)
 app.use('/foot',footRouter)
 
 app.listen(3000,()=>{
+
     console.log('server start')
 })
